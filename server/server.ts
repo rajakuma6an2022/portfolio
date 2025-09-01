@@ -29,17 +29,17 @@ app.get("/", (_req: Request, res: Response) => {
 
 // Send email route
 app.post("/send-email", (req: Request, res: Response) => {
-  const { to, subject, text } = req.body;
+  const { name, email, message } = req.body;
 
-  if (!to || !subject || !text) {
+  if (!name || !email || !message) {
     return res.status(400).json({ message: "All fields are required" });
   }
 
   const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to,
-    subject,
-    text,
+    from: process.env.GMAIL_ID,     // your Gmail
+    to: process.env.GMAIL_ID,       // send all messages to yourself
+    subject: `New message from ${name} (${email})`,
+    text: message,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
@@ -50,6 +50,7 @@ app.post("/send-email", (req: Request, res: Response) => {
     res.status(200).json({ message: "Email sent successfully", info });
   });
 });
+
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
