@@ -1,0 +1,33 @@
+# ------------------
+# Node / Server
+# ------------------
+node_modules/
+dist/
+.env
+npm-debug.log
+yarn-error.log
+*.log
+
+# ------------------
+# React + Vite / Client
+# ------------------
+client/node_modules/
+client/dist/
+client/.env
+client/.DS_Store
+
+# ------------------
+# OS & Editor files
+# ------------------
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+*.iml
+
+# ------------------
+# Optional / Testing
+# ------------------
+coverage/
+*.local
