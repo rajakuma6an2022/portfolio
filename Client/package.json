@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "homepage": "https://rajakumaran-dev.vercel.app/",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
