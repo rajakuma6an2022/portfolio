@@ -18,9 +18,13 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post(apiUrl, form);
+      const response = await fetch(`${apiUrl}/send-mail`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
-      if (res.status === 200) {
+      if (response.status === 200) {
         alert("Message sent successfully!");
         setForm({ name: "", email: "", message: "" });
       } else {
