@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Popup from "./Popup";
-import axios from "axios";
 
 const ContactForm: React.FC = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -18,7 +17,7 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`${apiUrl}/send-mail`, {
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -27,6 +26,7 @@ const ContactForm: React.FC = () => {
       if (response.status === 200) {
         alert("Message sent successfully!");
         setForm({ name: "", email: "", message: "" });
+
       } else {
         alert("Failed to send message.");
       }
