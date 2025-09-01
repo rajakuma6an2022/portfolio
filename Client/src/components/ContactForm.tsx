@@ -18,7 +18,7 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:3000/send-mail", form);
+      const res = await axios.post(apiUrl, form);
 
       if (res.status === 200) {
         alert("Message sent successfully!");
