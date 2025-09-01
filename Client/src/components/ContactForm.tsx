@@ -6,6 +6,7 @@ import axios from "axios";
 const ContactForm: React.FC = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -13,21 +14,32 @@ const ContactForm: React.FC = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("Sending...");
-    console.log('form', form)
-    // try {
-    //   await axios.post("https://api.rajakumaran.dev/send-email", form, {
-    //     headers: { "Content-Type": "application/json" },
-    //   });
-    //   setStatus("✅ Message sent successfully!");
-    //   setForm({ name: "", email: "", message: "" });
-    // } catch (err) {
-    //   console.error(err);
-    //   setStatus("❌ Failed to send message. Please try again later.");
-    // }
-  };
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const { name, email, message } = form; // <- destructure from form
+
+  try {
+    const res = await fetch(`${apiUrl}/send-email`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message }),
+    });
+
+    if (res.ok) {
+      alert("Message sent successfully!");
+      setForm({ name: "", email: "", message: "" }); // reset form
+    } else {
+      alert("Failed to send message.");
+    }
+  } catch (err) {
+    console.error(err);
+    alert("Error sending message.");
+  }
+};
+
+
+
   return (
     <Popup title="Contact Me">
       <form className="space-y-4">
