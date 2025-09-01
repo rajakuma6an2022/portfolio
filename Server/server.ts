@@ -12,12 +12,17 @@ app.use(bodyParser.json());
 
 // Nodemailer transport using SendGrid
 const transporter = nodemailer.createTransport({
-  service: "SendGrid",
+  host: "smtp.sendgrid.net",
+  port: 587, // or 465 for secure
+  secure: false, // true if port 465
   auth: {
     user: "apikey", // literal string "apikey"
     pass: process.env.SENDGRID_API_KEY,
   },
 });
+
+console.log(process.env.SENDGRID_API_KEY); // should log the actual key
+console.log(process.env.EMAIL_FROM);
 
 app.post("/send-email", async (req: Request, res: Response) => {
   const { name, email, message } = req.body;
