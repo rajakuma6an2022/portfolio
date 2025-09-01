@@ -3,30 +3,31 @@ import type { Request, Response } from "express";
 import nodemailer from "nodemailer";
 import cors from "cors";
 import bodyParser from "body-parser";
+import dotenv from "dotenv";
+
+dotenv.config(); // Load environment variables
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
 
 app.post("/send-email", async (req: Request, res: Response) => {
   const { name, email, message } = req.body;
 
   try {
-    // Configure SMTP (your server or domain email)
     const transporter = nodemailer.createTransport({
-      host: "mail.yourdomain.com", // Replace with your SMTP server
-      port: 465,
-      secure: true,
+      host: process.env.EMAIL_HOST,
+      port: Number(process.env.EMAIL_PORT),
+      secure: process.env.EMAIL_SECURE === "true",
       auth: {
-        user: "contact@yourdomain.com",
-        pass: "yourpassword", // Better: use ENV variable
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
-    // Send email
     await transporter.sendMail({
-      from: `"Portfolio Contact" <contact@yourdomain.com>`,
-      to: "yourpersonal@gmail.com",
+      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+      to: process.env.EMAIL_TO,
       subject: "New Portfolio Contact Form Submission",
       text: `From: ${name} (${email})\n\nMessage:\n${message}`,
       html: `<h3>From: ${name} (${email})</h3><p>${message}</p>`,
