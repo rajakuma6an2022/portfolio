@@ -14,31 +14,23 @@ const ContactForm: React.FC = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-  const { name, email, message } = form; // <- destructure from form
+    try {
+      const res = await axios.post("http://localhost:3000/send-mail", form);
 
-  try {
-    const res = await fetch(`${apiUrl}/send-email`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, message }),
-    });
-
-    if (res.ok) {
-      alert("Message sent successfully!");
-      setForm({ name: "", email: "", message: "" }); // reset form
-    } else {
-      alert("Failed to send message.");
+      if (res.status === 200) {
+        alert("Message sent successfully!");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error sending message.");
     }
-  } catch (err) {
-    console.error(err);
-    alert("Error sending message.");
-  }
-};
-
-
+  };
 
   return (
     <Popup title="Contact Me">
