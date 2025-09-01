@@ -6,6 +6,7 @@ const ContactForm: React.FC = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
   const apiUrl = import.meta.env.VITE_API_URL;
+  const API_URL = "https://portfolio-backend-e100.onrender.com/send-email"
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -17,7 +18,7 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(apiUrl, {
+      const response = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -26,7 +27,6 @@ const ContactForm: React.FC = () => {
       if (response.status === 200) {
         alert("Message sent successfully!");
         setForm({ name: "", email: "", message: "" });
-
       } else {
         alert("Failed to send message.");
       }
