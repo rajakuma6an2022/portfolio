@@ -3,10 +3,12 @@ import { portfolioData } from "../data/Portfolio";
 import { motion } from "framer-motion";
 
 const Projects: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<"Company" | "Personal">("Company");
+  const [activeTab, setActiveTab] = useState<
+    "Work Projects" | "Personal Creations"
+  >("Work Projects");
 
   const displayedProjects =
-    activeTab === "Company"
+    activeTab === "Work Projects"
       ? portfolioData?.companyProjects || []
       : portfolioData?.personalProjects || [];
 
@@ -16,17 +18,19 @@ const Projects: React.FC = () => {
 
       {/* Tabs */}
       <div className="flex flex-wrap justify-start gap-4 mb-8">
-        {["Company", "Personal"].map((tab) => (
+        {["Work Projects", "Personal Creations"].map((tab) => (
           <button
             key={tab}
-            onClick={() => setActiveTab(tab as "Company" | "Personal")}
+            onClick={() =>
+              setActiveTab(tab as "Work Projects" | "Personal Creations")
+            }
             className={`relative pb-1 text-sm sm:text-base font-medium transition-colors ${
               activeTab === tab
                 ? "text-blue-600"
                 : "text-text hover:text-blue-500"
             }`}
           >
-            {tab} Projects
+            {tab}
             {activeTab === tab && (
               <motion.div
                 layoutId="underline"
@@ -49,8 +53,41 @@ const Projects: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white dark:bg-gray-800 md:p-6 p-2 rounded-xl shadow-lg flex flex-col"
+                className="bg-white dark:bg-gray-800 md:p-6 p-2 rounded-xl shadow-lg flex flex-col relative"
               >
+                {project.link && (
+                  <motion.a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    whileHover={{
+                      scale: 1.15,
+                      rotate: 5,
+                      boxShadow: "0px 6px 20px rgba(0,0,0,0.2)",
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-md cursor-pointer transition-all duration-300"
+                    title="Live Demo"
+                  >
+                    <svg
+                      className="w-4 h-4 md:w-5 md:h-5" // smaller icon size
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      ></path>
+                    </svg>
+                  </motion.a>
+                )}
+
                 <h3 className="md:text-xl text-base font-semibold mb-2">
                   {project.title}
                 </h3>

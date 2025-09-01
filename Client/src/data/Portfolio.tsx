@@ -75,7 +75,7 @@ export const portfolioData: PortfolioData = {
       title: "MERADOC – Telemedicine Platform",
       description:
         "Telemedicine platform for appointment booking and doctor-patient interaction using MERN stack.",
-        technologies: [
+      technologies: [
         { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
         { name: "Redux Toolkit", icon: <SiRedux />, color: "#764ABC" },
         { name: "Bootstrap", icon: <SiBootstrap />, color: "#7952B3" },
@@ -95,7 +95,7 @@ export const portfolioData: PortfolioData = {
       title: "SANCHU ANIMAL HOSPITAL – Veterinary Platform",
       description:
         "Pet care and e-commerce portal built with Next.js and Redux in MERN stack.",
-       technologies: [
+      technologies: [
         { name: "Next.js", icon: <SiNextdotjs />, color: "#000000" },
         { name: "Redux Toolkit", icon: <SiRedux />, color: "#764ABC" },
         { name: "Bootstrap", icon: <SiBootstrap />, color: "#7952B3" },
@@ -115,7 +115,7 @@ export const portfolioData: PortfolioData = {
       title: "FINDOC – Financial Services Dashboard",
       description:
         "Interactive financial dashboard for tracking stocks and mutual funds using MERN stack.",
-       technologies: [
+      technologies: [
         { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
         { name: "Redux Toolkit", icon: <SiRedux />, color: "#764ABC" },
         { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38B2AC" },
@@ -133,6 +133,25 @@ export const portfolioData: PortfolioData = {
     },
   ],
   personalProjects: [
+    {
+      title: "Personal Portfolio Website",
+      description:
+        "A modern, responsive portfolio website to showcase my skills, projects, and contact form functionality. Built with React.js, Tailwind CSS, and Node.js backend for email functionality.",
+      technologies: [
+        { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
+        { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38B2AC" },
+        { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
+        { name: "Express.js", icon: <SiExpress />, color: "#000000" },
+      ],
+      highlights: [
+        "Responsive portfolio website with light/dark mode toggle",
+        "Interactive typing effect and smooth animations using Framer Motion",
+        "Contact form integrated with Nodemailer and Gmail for live email submissions",
+        "Frontend deployed on Vercel, backend on Render",
+        "Showcases skills, education, and projects dynamically using React components",
+      ],
+      link : "https://rajakumaran-dev.vercel.app/"
+    },
     // {
     //   title: "TaskPro – Task Management System",
     //   description:
