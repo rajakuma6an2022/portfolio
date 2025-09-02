@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 const ContactForm: React.FC = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
-  const apiUrl = import.meta.env.VITE_API_URL;
   const API_URL = "https://portfolio-backend-e100.onrender.com/send-mail";
   const navigate = useNavigate();
 
