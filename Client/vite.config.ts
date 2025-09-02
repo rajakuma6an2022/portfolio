@@ -4,15 +4,5 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  build: {
-    rollupOptions: {
-      input: '/src/main.tsx',
-    },
-    ssr: '/src/entry-server.tsx',
-  },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './client/src'),
-    },
-  },
+  base : "/"
 });
