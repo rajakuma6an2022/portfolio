@@ -1,16 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "paths": {
-      "@/*": ["client/src/*"]
-    },
+    "target": "ES2020",
+    "module": "CommonJS",
     "outDir": "dist",
-    "jsx": "react-jsx",
-    "esModuleInterop": true,
+    "rootDir": ".",
     "strict": true,
+    "esModuleInterop": true,
     "skipLibCheck": true
   },
-  "include": ["client", "server"]
+  "include": ["*.ts"], // include all TS files in server folder root
+  "exclude": ["dist", "node_modules"]
 }
