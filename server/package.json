@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "dev": "ts-node --esm server/index.ts",
-    "build:client": "vite build --outDir dist/client",
-    "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
-    "build": "npm run build:client && npm run build:server",
-    "start": "node dist/server/index.js"
+    "dev": "ts-node-dev --respawn --transpile-only server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
@@ -18,8 +16,7 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
-    "nodemailer": "^7.0.6",
-    "vite": "^7.1.4"
+    "nodemailer": "^7.0.6"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.6",
