@@ -18,26 +18,28 @@ const ContactForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch(API_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
       alert("Message sent successfully!");
-      setForm({ name: "", email: "", message: "" });
-      navigate("/");
-      // if (response.status === 200) {
-      //   alert("Message sent successfully!");
-      //   setForm({ name: "", email: "", message: "" });
-      //   navigate("/");
-      // } else {
-      //   alert("Failed to send message.");
-      // }
-    } catch (err) {
-      console.error(err);
-      alert("Error sending message.");
-    }
+        setForm({ name: "", email: "", message: "" });
+        navigate("/");
+
+    // try {
+    //   const response = await fetch(API_URL, {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify(form),
+    //   });
+
+    //   if (response.status === 200) {
+    //     alert("Message sent successfully!");
+    //     setForm({ name: "", email: "", message: "" });
+    //     navigate("/");
+    //   } else {
+    //     alert("Failed to send message.");
+    //   }
+    // } catch (err) {
+    //   console.error(err);
+    //   alert("Error sending message.");
+    // }
   };
 
   return (
