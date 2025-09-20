@@ -150,29 +150,28 @@ export const portfolioData: PortfolioData = {
         "Frontend deployed on Vercel, backend on Render",
         "Showcases skills, education, and projects dynamically using React components",
       ],
-      link : "https://rajakumaran-dev.vercel.app/"
+      link: "https://rajakumaran-dev.vercel.app/",
     },
-    // {
-    //   title: "TaskPro – Task Management System",
-    //   description:
-    //     "Full-stack MERN task management system with real-time updates and role-based access.",
-    //     technologies: [
-    //     { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
-    //     { name: "Redux Toolkit", icon: <SiRedux />, color: "#764ABC" },
-    //     { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38B2AC" },
-    //     { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
-    //     { name: "Express.js", icon: <SiExpress />, color: "#000000" },
-    //     { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" },
-    //     { name: "PostgreSQL", icon: <SiPostgresql />, color: "#336791" },
-    //   ],
-    //   highlights: [
-    //     "Designed and developed a full-stack MERN application for task management with task creation, assignment, role-based access, and real-time updates",
-    //     "Built secure backend APIs using Node.js, Express.js, and MongoDB (Mongoose) with JWT authentication",
-    //     "Integrated APIs with a React.js + Tailwind CSS frontend ensuring a responsive and modern UI",
-    //     "Implemented user roles (Admin, User) with access control for task assignment and team collaboration",
-    //     "Deployed on AWS (EC2, S3, Route 53) with Docker, optimized using lazy loading, caching, and database indexing",
-    //   ],
-    // },
+    {
+      title: "SmartBudget App",
+      description:
+        "A comprehensive personal finance and budgeting app to track expenses, set budgets, and analyze spending patterns. Built with React.js for the frontend and Node.js/Express.js for the backend, with MongoDB for data storage.",
+      technologies: [
+        { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
+        { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38B2AC" },
+        { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
+        { name: "Express.js", icon: <SiExpress />, color: "#000000" },
+        { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" },
+      ],
+      highlights: [
+        "Track income, expenses, and savings in real-time with dynamic charts",
+        "Set monthly budgets and get notifications when nearing limits",
+        "Secure user authentication and data storage using JWT and MongoDB",
+        "Interactive dashboard with category-wise spending analysis",
+        "Responsive design with light/dark mode toggle for a seamless user experience",
+      ],
+      link: "https://smart-budget-frontend.onrender.com/",
+    },
   ],
   skills: [
     {
@@ -182,6 +181,8 @@ export const portfolioData: PortfolioData = {
         { name: "Next.js", icon: <SiNextdotjs />, color: "#000000" },
         { name: "Redux Toolkit", icon: <SiRedux />, color: "#764ABC" },
         { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38B2AC" },
+        { name: "HTML5", icon: <FaHtml5 />, color: "#E34F26" },
+        { name: "CSS3", icon: <FaCss3Alt />, color: "#1572B6" },
       ],
     },
     {
@@ -206,8 +207,6 @@ export const portfolioData: PortfolioData = {
       items: [
         { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
         { name: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
-        { name: "HTML5", icon: <FaHtml5 />, color: "#E34F26" },
-        { name: "CSS3", icon: <FaCss3Alt />, color: "#1572B6" },
       ],
     },
     {
