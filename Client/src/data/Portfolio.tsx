@@ -28,19 +28,25 @@ import {
   SiBabel,
   SiPostgresql,
   SiBootstrap,
+  SiAngular,
+  SiJsonwebtokens,
+  SiPostman,
+  SiSass,
+  SiPassport,
+  SiPwa,
 } from "react-icons/si";
 import { PortfolioData } from "../types/portfolioTypes";
 import rajkumar from "../assets/rajkumar.jpg";
 import naukri from "../assets/naukri.png";
-import resume from "../assets/raj-mern-resume.pdf";
+import resume from "../assets/rajakumaran-MERN-resume.pdf";
 import fullStackCertificate from "../assets/fullstackwebdev-certificate.pdf";
 
 export const portfolioData: PortfolioData = {
   hero: {
     name: "Raja Kumaran",
-    role: "MERN Stack Developer",
+    role: "Full Stack Developer",
     description:
-      "MERN Stack Developer | 2+ years experience building responsive, full-stack web applications with React, Node.js, Express, and MongoDB. Skilled in REST APIs, JWT authentication, Next.js, Redux Toolkit, and Tailwind CSS. Passionate about creating optimized, maintainable, and scalable solutions.",
+      "Full Stack Developer | 2+ years experience building responsive, full-stack web applications with React, Angular, Node.js, Express, and MongoDB. Skilled in REST APIs, JWT authentication, Next.js, Redux Toolkit, and Tailwind CSS. Passionate about creating optimized, maintainable, and scalable solutions.",
     location: "Chennai, India",
     email: "rajakuma6an93@gmail.com",
     phone: "+91 96004 49228",
@@ -71,6 +77,32 @@ export const portfolioData: PortfolioData = {
         "Optimized performance by 30% using Webpack and lazy loading",
       ],
     },
+    {
+      title: "Miles Education – EdTech Learning Platform",
+      description:
+        "Interactive EdTech platform featuring learning modules, student dashboards, and real-time progress tracking.",
+      technologies: [
+        { name: "Angular", icon: <SiAngular />, color: "#DD0031" },
+        { name: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
+        { name: "HTML5", icon: <FaHtml5 />, color: "#E34F26" },
+        { name: "SCSS", icon: <SiSass />, color: "#CC6699" },
+        { name: "REST APIs", icon: <SiPostman />, color: "#FF6C37" },
+        {
+          name: "JWT Authentication",
+          icon: <SiJsonwebtokens />,
+          color: "#000000",
+        },
+      ],
+      highlights: [
+        "Developed interactive learning modules and student dashboards using Angular and RxJS, improving learner engagement by 40%",
+        "Built optimized, reusable Angular components and state-driven UI workflows for seamless navigation and improved performance",
+        "Implemented secure authentication and role-based access using JWT for students, instructors, and admins",
+        "Integrated REST APIs for real-time course tracking, assessments, and progress analytics",
+        "Improved frontend load speed by 25% through lazy loading, route optimization, and code splitting",
+        "Collaborated with product and design teams to deliver scalable, user-friendly interfaces",
+      ],
+    },
+
     {
       title: "MERADOC – Telemedicine Platform",
       description:
@@ -150,27 +182,29 @@ export const portfolioData: PortfolioData = {
         "Frontend deployed on Vercel, backend on Render",
         "Showcases skills, education, and projects dynamically using React components",
       ],
-      link: "https://rajakumaran-dev.vercel.app/",
+      link: "https://portfolio-frontend-vu2z.onrender.com/",
     },
     {
-      title: "SmartBudget App",
+      title: "HabitLyst – Habit & Expense Tracker Web App",
       description:
-        "A comprehensive personal finance and budgeting app to track expenses, set budgets, and analyze spending patterns. Built with React.js for the frontend and Node.js/Express.js for the backend, with MongoDB for data storage.",
+        "A full-stack habit and expense tracking platform with offline support and secure Google authentication, built using Next.js and the MERN stack.",
       technologies: [
+        { name: "Next.js", icon: <SiNextdotjs />, color: "#000000" },
         { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
-        { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38B2AC" },
         { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
         { name: "Express.js", icon: <SiExpress />, color: "#000000" },
         { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" },
+        { name: "Passport.js", icon: <SiPassport />, color: "#34E27A" },
+        { name: "PWA", icon: <SiPwa />, color: "#5A0FC8" },
       ],
       highlights: [
-        "Track income, expenses, and savings in real-time with dynamic charts",
-        "Set monthly budgets and get notifications when nearing limits",
-        "Secure user authentication and data storage using JWT and MongoDB",
-        "Interactive dashboard with category-wise spending analysis",
-        "Responsive design with light/dark mode toggle for a seamless user experience",
+        "Built a full-stack habit and expense tracking platform using Next.js and the MERN stack",
+        "Implemented secure Google authentication using Passport.js with session-based user management",
+        "Added Progressive Web App (PWA) support enabling offline access and home-screen installation",
+        "Designed and developed RESTful APIs with optimized MongoDB schemas for efficient data handling",
+        "Used hybrid rendering in Next.js: SSG for marketing pages, SSR for dashboards, and CSR for interactive features",
       ],
-      link: "https://smart-budget-frontend.onrender.com/",
+      link: "", // optional – update if different
     },
   ],
   skills: [
@@ -178,6 +212,7 @@ export const portfolioData: PortfolioData = {
       category: "Frontend",
       items: [
         { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
+        { name: "Angular", icon: <SiAngular />, color: "#DD0031" },
         { name: "Next.js", icon: <SiNextdotjs />, color: "#000000" },
         { name: "Redux Toolkit", icon: <SiRedux />, color: "#764ABC" },
         { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38B2AC" },
