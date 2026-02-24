@@ -68,48 +68,59 @@ const About: React.FC = () => {
           </div>
         </div>
       ) : activeTab === "Skills" ? (
-        <div className="">
-          <h2 className="md:text-2xl text-lg sm:text-3xl md:text-4xl font-bold mb-2 md:mb-6">
-            Skills
-          </h2>
-          {/* Right Column - Skills */}
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 sm:gap-6">
-            {portfolioData.skills.map((category) => (
-              <motion.div
-                key={category.category}
-                className="p-4 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-800 flex flex-col 
-                 hover:shadow-2xl dark:hover:shadow-[0_10px_25px_rgba(255,255,255,0.1)] transition-shadow"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="font-bold md:text-lg text-base mb-4 text-gray-800 dark:text-gray-100">
-                  {category.category}
-                </h3>
-                <div className="flex flex-wrap gap-5 sm:gap-4 justify-start">
-                  {category.items.map((skill) => (
-                    <motion.div
-                      key={skill.name}
-                      className="flex flex-col items-center justify-center w-14 h-14 sm:w-16 sm:h-16 p-2 rounded-lg 
-                       hover:scale-110 hover:-translate-y-1 transition-transform shadow-sm dark:shadow-[0_2px_6px_rgba(255,255,255,0.05)]"
-                      whileHover={{ scale: 1.15, y: -3 }}
-                    >
-                      <div
-                        className="text-2xl sm:text-3xl mb-1 sm:mb-2"
-                        style={{ color: skill.color || "#000" }}
-                      >
-                        {skill.icon}
-                      </div>
-                      <span className="text-xs sm:text-sm font-medium text-center text-gray-700 dark:text-gray-200">
-                        {skill.name}
-                      </span>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+        <div className="flex flex-wrap gap-4">
+  {portfolioData.skills.flatMap(cat => cat.items).map(skill => (
+    <div
+      key={skill.name}
+      className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-700 shadow-sm hover:scale-110 transition"
+    >
+      <span style={{ color: skill.color }}>{skill.icon}</span>
+      <span className="text-sm font-medium">{skill.name}</span>
+    </div>
+  ))}
+</div>
+        // <div className="">
+        //   <h2 className="md:text-2xl text-lg sm:text-3xl md:text-4xl font-bold mb-2 md:mb-6">
+        //     Skills
+        //   </h2>
+        //   {/* Right Column - Skills */}
+        //   <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 sm:gap-6">
+        //     {portfolioData.skills.map((category) => (
+        //       <motion.div
+        //         key={category.category}
+        //         className="p-4 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-800 flex flex-col 
+        //          hover:shadow-2xl dark:hover:shadow-[0_10px_25px_rgba(255,255,255,0.1)] transition-shadow"
+        //         initial={{ opacity: 0, y: 10 }}
+        //         whileInView={{ opacity: 1, y: 0 }}
+        //         viewport={{ once: true }}
+        //       >
+        //         <h3 className="font-bold md:text-lg text-base mb-4 text-gray-800 dark:text-gray-100">
+        //           {category.category}
+        //         </h3>
+        //         <div className="flex flex-wrap gap-5 sm:gap-4 justify-start">
+        //           {category.items.map((skill) => (
+        //             <motion.div
+        //               key={skill.name}
+        //               className="flex flex-col items-center justify-center w-14 h-14 sm:w-16 sm:h-16 p-2 rounded-lg 
+        //                hover:scale-110 hover:-translate-y-1 transition-transform shadow-sm dark:shadow-[0_2px_6px_rgba(255,255,255,0.05)]"
+        //               whileHover={{ scale: 1.15, y: -3 }}
+        //             >
+        //               <div
+        //                 className="text-2xl sm:text-3xl mb-1 sm:mb-2"
+        //                 style={{ color: skill.color || "#000" }}
+        //               >
+        //                 {skill.icon}
+        //               </div>
+        //               <span className="text-xs sm:text-sm font-medium text-center text-gray-700 dark:text-gray-200">
+        //                 {skill.name}
+        //               </span>
+        //             </motion.div>
+        //           ))}
+        //         </div>
+        //       </motion.div>
+        //     ))}
+        //   </div>
+        // </div>
       ) : (
         <div className="w-full md:w-[50%]">
           <h2 className="md:text-2xl text-lg sm:text-3xl md:text-4xl font-bold mb-2 md:mb-6">
