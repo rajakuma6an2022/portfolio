@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(cors({
-  origin: ["https://rajakumaran-dev.vercel.app","http://localhost:5173"]
+  origin: ["https://portfolio-frontend-vu2z.onrender.com","http://localhost:5173"]
 }));
 app.use(bodyParser.json());
 
