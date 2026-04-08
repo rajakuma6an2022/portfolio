@@ -84,14 +84,14 @@ const Home: React.FC = () => {
         </motion.div>
 
         <div className="flex flex-col sm:flex-row gap-3 mt-4">
-          <motion.button
+          {/* <motion.button
             className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => navigate("/contact")}
           >
             Contact Me
-          </motion.button>
+          </motion.button> */}
 
           <motion.a
             onClick={() => handleDownload(resumeLink)}
