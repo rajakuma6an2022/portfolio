@@ -36,7 +36,7 @@ import {
 import { PortfolioData } from "../types/portfolioTypes";
 
 import rajkumar from "../assets/rajkumar.jpg";
-import resume from "../assets/rajakumaran-resume.pdf";
+import resume from "../assets/Rajakumaran_Resume.pdf";
 import fullStackCertificate from "../assets/fullstackwebdev-certificate.pdf";
 
 export const portfolioData: PortfolioData = {
