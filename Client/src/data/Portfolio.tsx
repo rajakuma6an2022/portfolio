@@ -1,4 +1,5 @@
 // portfolioData.ts
+
 import {
   FaReact,
   FaNodeJs,
@@ -6,12 +7,11 @@ import {
   FaCss3Alt,
   FaGithub,
   FaDocker,
-  FaAws,
   FaLinkedin,
-  FaDatabase,
   FaLanguage,
   FaGitAlt,
 } from "react-icons/fa";
+
 import {
   SiNextdotjs,
   SiRedux,
@@ -21,332 +21,886 @@ import {
   SiJavascript,
   SiExpress,
   SiJest,
-  SiVercel,
-  SiFigma,
-  SiStorybook,
-  SiEslint,
-  SiPrettier,
-  SiWebpack,
-  SiBabel,
   SiPostgresql,
-  SiBootstrap,
   SiAngular,
   SiJsonwebtokens,
   SiPostman,
   SiSass,
-  SiPassport,
   SiPwa,
   SiReactivex,
-  SiSecurityscorecard,
   SiGithubactions,
   SiScrumalliance,
-  SiDatabricks,
   SiAuth0,
 } from "react-icons/si";
+
 import { PortfolioData } from "../types/portfolioTypes";
+
 import rajkumar from "../assets/rajkumar.jpg";
-import naukri from "../assets/naukri.png";
 import resume from "../assets/rajakumaran-resume.pdf";
 import fullStackCertificate from "../assets/fullstackwebdev-certificate.pdf";
 
 export const portfolioData: PortfolioData = {
+  // =========================================================
+  // HERO
+  // =========================================================
+
   hero: {
     name: "Raja Kumaran",
-    role: "Full Stack Developer",
+
+    role: "Frontend Developer",
+
     description:
-      "Results-driven Full Stack Developer with 2+ years of experience building scalable, production-ready web applications using React, Angular, Next.js, Node.js, and Express. Specialized in designing secure REST APIs with JWT authentication and RBAC, and optimizing database performance with PostgreSQL and MongoDB. Strong focus on performance tuning, clean architecture, and delivering responsive, user-focused digital experiences.",
+      "Frontend Developer with 2.6+ years of professional experience building production web applications using React.js, JavaScript, TypeScript, and Angular across healthcare, fintech, edtech, and agri-tech domains. Strong in responsive UI development, reusable components, REST API integration, authentication flows, state management, debugging, and frontend performance optimization. Since September 2025, independently building full-stack applications with Node.js, Express.js, PostgreSQL, MongoDB, JWT/RBAC, testing, and Docker.",
+
     location: "Chennai, India",
+
     email: "rajakuma6an93@gmail.com",
+
     phone: "+91 96004 49228",
+
     resumeLink: resume,
+
     linkedIn: "https://www.linkedin.com/in/rajakuma6an/",
+
     github: "https://github.com/rajakuma6an2022",
+
     image: rajkumar,
   },
 
+  // =========================================================
+  // PROFESSIONAL / COMPANY PROJECTS
+  // =========================================================
+  // IMPORTANT:
+  // These projects represent professional frontend experience.
+  // Backend technologies/claims are intentionally not overstated.
+  // =========================================================
+
   companyProjects: [
     {
-      title: "DIGIGRAIN – AgriTech Procurement Platform",
+      title: "DIGIGRAIN – Agri-Tech Procurement Platform",
+
       description:
-        "Full-stack AgriTech procurement system enabling farmers and vendors to manage orders, inventory, and transactions with secure role-based access.",
+        "Responsive multi-role procurement platform with dashboards and business workflow interfaces for agri-tech operations.",
+
       technologies: [
-        { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
-        { name: "Redux Toolkit", icon: <SiRedux />, color: "#764ABC" },
-        { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38B2AC" },
-        { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
-        { name: "Express.js", icon: <SiExpress />, color: "#000000" },
-        { name: "PostgreSQL", icon: <SiPostgresql />, color: "#336791" },
+        {
+          name: "React.js",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "Redux Toolkit",
+          icon: <SiRedux />,
+          color: "#764ABC",
+        },
+        {
+          name: "Tailwind CSS",
+          icon: <SiTailwindcss />,
+          color: "#38B2AC",
+        },
+        {
+          name: "REST APIs",
+          icon: <SiPostman />,
+          color: "#FF6C37",
+        },
+        {
+          name: "JWT",
+          icon: <SiJsonwebtokens />,
+          color: "#000000",
+        },
+        {
+          name: "RBAC",
+          icon: <SiAuth0 />,
+          color: "#EB5424",
+        },
       ],
+
       highlights: [
-        "Built scalable REST APIs using Express.js with optimized PostgreSQL relational schema and indexing",
-        "Implemented secure JWT authentication with Role-Based Access Control (RBAC)",
-        "Developed dynamic role-based dashboards using React.js and Redux Toolkit",
-        "Improved workflow efficiency by 35% through UI architecture optimization and API performance tuning",
-        "Enhanced frontend performance using lazy loading and code-splitting strategies",
+        "Developed responsive dashboards and workflow screens for a multi-role procurement platform.",
+        "Implemented reusable React components and role-based UI experiences using Redux Toolkit.",
+        "Integrated REST APIs for authentication, procurement workflows, and business operations.",
+        "Built responsive interfaces using Tailwind CSS and reusable layout patterns.",
+        "Improved frontend performance using lazy loading and code-splitting strategies.",
       ],
     },
 
     {
       title: "MERADOC – Telemedicine Platform",
+
       description:
-        "Full-stack telemedicine platform for appointment booking, doctor-patient interaction, and secure health record management.",
+        "Telemedicine platform providing patient and doctor interfaces for appointment booking and healthcare workflows.",
+
       technologies: [
-        { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
-        { name: "Redux Toolkit", icon: <SiRedux />, color: "#764ABC" },
-        { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38B2AC" },
-        { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
-        { name: "Express.js", icon: <SiExpress />, color: "#000000" },
-        { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" },
-        { name: "PWA", icon: <SiPwa />, color: "#5A0FC8" },
+        {
+          name: "React.js",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "Redux Toolkit",
+          icon: <SiRedux />,
+          color: "#764ABC",
+        },
+        {
+          name: "Tailwind CSS",
+          icon: <SiTailwindcss />,
+          color: "#38B2AC",
+        },
+        {
+          name: "React Router",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "REST APIs",
+          icon: <SiPostman />,
+          color: "#FF6C37",
+        },
+        {
+          name: "JWT",
+          icon: <SiJsonwebtokens />,
+          color: "#000000",
+        },
+        {
+          name: "PWA",
+          icon: <SiPwa />,
+          color: "#5A0FC8",
+        },
+        {
+          name: "Jest",
+          icon: <SiJest />,
+          color: "#C21325",
+        },
       ],
+
       highlights: [
-        "Developed secure JWT-based authentication and appointment management APIs",
-        "Optimized MongoDB queries using indexing, pagination, and aggregation pipelines",
-        "Implemented Progressive Web App (PWA) features including service workers, caching, and offline access",
-        "Improved application load performance by 30% through caching and API response optimization",
-        "Built responsive UI workflows with Redux Toolkit for real-time booking updates",
+        "Developed patient and doctor interfaces for appointment booking and healthcare workflows.",
+        "Implemented authentication flows and protected frontend routes using JWT-based authentication.",
+        "Used Redux Toolkit for application state management and complex UI workflows.",
+        "Implemented PWA features including caching and responsive behavior.",
+        "Developed unit tests using Jest and React Testing Library.",
       ],
     },
 
     {
-      title: "SANCHU ANIMAL HOSPITAL – Veterinary Platform",
+      title: "SANCHU ANIMAL HOSPITAL – Veterinary Care Platform",
+
       description:
-        "Full-stack veterinary care and appointment management platform with server-side rendering and optimized performance.",
+        "Responsive veterinary care platform for pet management, appointments, and record-viewing workflows.",
+
       technologies: [
-        { name: "Next.js", icon: <SiNextdotjs />, color: "#000000" },
-        { name: "Redux Toolkit", icon: <SiRedux />, color: "#764ABC" },
-        { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
-        { name: "Express.js", icon: <SiExpress />, color: "#000000" },
-        { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" },
+        {
+          name: "Next.js",
+          icon: <SiNextdotjs />,
+          color: "#000000",
+        },
+        {
+          name: "React",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "Redux Toolkit",
+          icon: <SiRedux />,
+          color: "#764ABC",
+        },
+        {
+          name: "REST APIs",
+          icon: <SiPostman />,
+          color: "#FF6C37",
+        },
+        {
+          name: "Responsive Design",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
       ],
+
       highlights: [
-        "Built RESTful backend services for appointment scheduling and pet health records",
-        "Designed efficient MongoDB schemas with indexing for optimized data retrieval",
-        "Enhanced performance using Next.js SSR, dynamic imports, and image optimization",
-        "Improved responsiveness and cross-device compatibility with optimized UI components",
-        "Reduced page load times through code splitting and bundle optimization",
+        "Built responsive pet management, appointment, and record-viewing workflows.",
+        "Integrated REST APIs and handled loading, success, empty, and error states.",
+        "Used Next.js rendering and dynamic imports to improve frontend performance.",
+        "Developed reusable UI components for consistent cross-device experiences.",
+        "Optimized responsive behavior across desktop, tablet, and mobile layouts.",
       ],
     },
 
     {
       title: "FINDOC – Fintech Financial Dashboard",
+
       description:
-        "Interactive financial dashboard for portfolio management, stock tracking, and real-time analytics.",
+        "Interactive fintech dashboard for financial data visualization, portfolio workflows, and transaction tracking.",
+
       technologies: [
-        { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
-        { name: "Redux Toolkit", icon: <SiRedux />, color: "#764ABC" },
-        { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38B2AC" },
-        { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
-        { name: "Express.js", icon: <SiExpress />, color: "#000000" },
-        { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" },
-        { name: "PWA", icon: <SiPwa />, color: "#5A0FC8" },
+        {
+          name: "React.js",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "Redux Toolkit",
+          icon: <SiRedux />,
+          color: "#764ABC",
+        },
+        {
+          name: "Tailwind CSS",
+          icon: <SiTailwindcss />,
+          color: "#38B2AC",
+        },
+        {
+          name: "REST APIs",
+          icon: <SiPostman />,
+          color: "#FF6C37",
+        },
+        {
+          name: "PWA",
+          icon: <SiPwa />,
+          color: "#5A0FC8",
+        },
       ],
+
       highlights: [
-        "Developed interactive financial dashboard with portfolio and transaction tracking",
-        "Integrated real-time stock market APIs with Redux Toolkit for state synchronization",
-        "Built secure backend services with Express.js and optimized MongoDB schema design",
-        "Reduced UI rendering time by 20% through memoization and component optimization",
-        "Implemented PWA support with offline portfolio access and persistent theming",
+        "Developed interactive financial dashboards with portfolio and transaction tracking workflows.",
+        "Integrated REST APIs and managed application state using Redux Toolkit.",
+        "Built reusable responsive components for financial data and business workflows.",
+        "Improved UI rendering performance through memoization and component optimization.",
+        "Implemented responsive layouts and PWA capabilities for improved usability.",
       ],
     },
 
     {
       title: "Miles Education – EdTech Learning Platform",
+
       description:
-        "Modular EdTech platform featuring interactive learning modules, dashboards, and real-time progress tracking.",
+        "EdTech learning platform featuring learning modules, student dashboards, and progress-tracking workflows.",
+
       technologies: [
-        { name: "Angular", icon: <SiAngular />, color: "#DD0031" },
-        { name: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
-        { name: "RxJS", icon: <SiReactivex />, color: "#B7178C" },
-        { name: "REST APIs", icon: <SiPostman />, color: "#FF6C37" },
         {
-          name: "JWT Authentication",
+          name: "Angular",
+          icon: <SiAngular />,
+          color: "#DD0031",
+        },
+        {
+          name: "TypeScript",
+          icon: <SiTypescript />,
+          color: "#3178C6",
+        },
+        {
+          name: "RxJS",
+          icon: <SiReactivex />,
+          color: "#B7178C",
+        },
+        {
+          name: "REST APIs",
+          icon: <SiPostman />,
+          color: "#FF6C37",
+        },
+        {
+          name: "JWT",
           icon: <SiJsonwebtokens />,
           color: "#000000",
         },
       ],
+
       highlights: [
-        "Developed modular Angular dashboards using RxJS-driven state management",
-        "Integrated secure JWT-based authentication with role-based access control",
-        "Connected REST APIs for real-time course tracking and assessment analytics",
-        "Improved application performance by 25% using lazy loading and route-level optimization",
-        "Built reusable components and scalable architecture for long-term maintainability",
+        "Developed learning modules and student dashboards using Angular and TypeScript.",
+        "Implemented RxJS-driven workflows for application state and asynchronous operations.",
+        "Integrated JWT-protected REST APIs for learning and student workflows.",
+        "Built reusable Angular components for scalable frontend development.",
+        "Improved performance using lazy loading and route-level optimization.",
       ],
     },
   ],
+
+  // =========================================================
+  // PERSONAL PROJECTS
+  // =========================================================
+  // SmartClinicQ is the strongest full-stack project.
+  // =========================================================
+
   personalProjects: [
     {
-      title: "Personal Portfolio Website",
+      title: "SmartClinicQ – Multi-Tenant Clinic Queue Management SaaS",
+
       description:
-        "A modern, responsive portfolio website to showcase my skills, projects, and contact form functionality. Built with React.js, Tailwind CSS, and Node.js backend for email functionality.",
+        "Full-stack clinic queue management SaaS application for patients, appointments, queues, public booking, and real-time queue status.",
+
       technologies: [
-        { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
-        { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38B2AC" },
-        { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
-        { name: "Express.js", icon: <SiExpress />, color: "#000000" },
+        {
+          name: "Next.js",
+          icon: <SiNextdotjs />,
+          color: "#000000",
+        },
+        {
+          name: "React",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "TypeScript",
+          icon: <SiTypescript />,
+          color: "#3178C6",
+        },
+        {
+          name: "Node.js",
+          icon: <FaNodeJs />,
+          color: "#339933",
+        },
+        {
+          name: "Express.js",
+          icon: <SiExpress />,
+          color: "#000000",
+        },
+        {
+          name: "PostgreSQL",
+          icon: <SiPostgresql />,
+          color: "#336791",
+        },
+        {
+          name: "JWT",
+          icon: <SiJsonwebtokens />,
+          color: "#000000",
+        },
+        {
+          name: "RBAC",
+          icon: <SiAuth0 />,
+          color: "#EB5424",
+        },
+        {
+          name: "Socket.io",
+          icon: <FaNodeJs />,
+          color: "#010101",
+        },
+        {
+          name: "Docker",
+          icon: <FaDocker />,
+          color: "#2496ED",
+        },
       ],
+
       highlights: [
-        "Responsive portfolio website with light/dark mode toggle",
-        "Interactive typing effect and smooth animations using Framer Motion",
-        "Contact form integrated with Nodemailer and Gmail for live email submissions",
-        "Frontend deployed on Vercel, backend on Render",
-        "Showcases skills, education, and projects dynamically using React components",
+        "Built a full-stack clinic queue management SaaS application for patients, appointments, queues, public booking, and real-time queue status.",
+        "Implemented multi-tenant data isolation, role-based authorization, access/refresh-token authentication, request validation, centralized error handling, search, filtering, and pagination.",
+        "Developed Socket.io room-based real-time queue updates for live queue status changes.",
+        "Applied security controls including Helmet, strict CORS, rate limiting, secure cookies, and environment-based configuration.",
+        "Designed PostgreSQL database structures and implemented backend API workflows using Node.js and Express.js.",
       ],
+
+      link: "",
+    },
+
+    // {
+    //   title: "HabitLyst – Habit & Expense Tracker",
+
+    //   description:
+    //     "Full-stack habit and expense tracking web application focused on authentication, data management, offline support, and responsive user experience.",
+
+    //   technologies: [
+    //     {
+    //       name: "Next.js",
+    //       icon: <SiNextdotjs />,
+    //       color: "#000000",
+    //     },
+    //     {
+    //       name: "React",
+    //       icon: <FaReact />,
+    //       color: "#61DAFB",
+    //     },
+    //     {
+    //       name: "Node.js",
+    //       icon: <FaNodeJs />,
+    //       color: "#339933",
+    //     },
+    //     {
+    //       name: "Express.js",
+    //       icon: <SiExpress />,
+    //       color: "#000000",
+    //     },
+    //     {
+    //       name: "MongoDB",
+    //       icon: <SiMongodb />,
+    //       color: "#47A248",
+    //     },
+    //     {
+    //       name: "PWA",
+    //       icon: <SiPwa />,
+    //       color: "#5A0FC8",
+    //     },
+    //   ],
+
+    //   highlights: [
+    //     "Built a full-stack habit and expense tracking application using Next.js and Node.js.",
+    //     "Implemented authentication and session-based user management.",
+    //     "Designed RESTful APIs and MongoDB data models for habit and expense management.",
+    //     "Added Progressive Web App support for offline access and home-screen installation.",
+    //     "Implemented responsive interfaces for desktop and mobile users.",
+    //   ],
+
+    //   link: "",
+    // },
+
+    {
+      title: "Personal Portfolio Website",
+
+      description:
+        "Modern responsive developer portfolio built to showcase professional experience, technical skills, projects, education, and contact information.",
+
+      technologies: [
+        {
+          name: "React.js",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "Tailwind CSS",
+          icon: <SiTailwindcss />,
+          color: "#38B2AC",
+        },
+        {
+          name: "Node.js",
+          icon: <FaNodeJs />,
+          color: "#339933",
+        },
+        {
+          name: "Express.js",
+          icon: <SiExpress />,
+          color: "#000000",
+        },
+      ],
+
+      highlights: [
+        "Built a responsive portfolio website using React.js and Tailwind CSS.",
+        "Implemented light and dark mode with reusable React components.",
+        "Added interactive animations and typing effects using Framer Motion.",
+        "Integrated a contact form with email functionality.",
+        "Deployed the application using modern frontend and backend hosting platforms.",
+      ],
+
       link: "https://portfolio-frontend-vu2z.onrender.com/",
     },
-    {
-      title: "HabitLyst – Habit & Expense Tracker Web App",
-      description:
-        "A full-stack habit and expense tracking platform with offline support and secure Google authentication, built using Next.js and the MERN stack.",
-      technologies: [
-        { name: "Next.js", icon: <SiNextdotjs />, color: "#000000" },
-        { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
-        { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
-        { name: "Express.js", icon: <SiExpress />, color: "#000000" },
-        { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" },
-        { name: "Passport.js", icon: <SiPassport />, color: "#34E27A" },
-        { name: "PWA", icon: <SiPwa />, color: "#5A0FC8" },
-      ],
-      highlights: [
-        "Built a full-stack habit and expense tracking platform using Next.js and the MERN stack",
-        "Implemented secure Google authentication using Passport.js with session-based user management",
-        "Added Progressive Web App (PWA) support enabling offline access and home-screen installation",
-        "Designed and developed RESTful APIs with optimized MongoDB schemas for efficient data handling",
-        "Used hybrid rendering in Next.js: SSG for marketing pages, SSR for dashboards, and CSR for interactive features",
-      ],
-      link: "", // optional – update if different
-    },
   ],
+
+  // =========================================================
+  // SKILLS
+  // =========================================================
 
   skills: [
     {
       category: "Frontend Technologies",
+
       items: [
-        { name: "React.js", icon: <FaReact />, color: "#61DAFB" },
-        { name: "Next.js", icon: <SiNextdotjs />, color: "#000000" },
-        { name: "Angular", icon: <SiAngular />, color: "#DD0031" },
-        { name: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
-        { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
-        { name: "HTML5", icon: <FaHtml5 />, color: "#E34F26" },
-        { name: "CSS3", icon: <FaCss3Alt />, color: "#1572B6" },
-        { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38B2AC" },
-        { name: "Redux Toolkit", icon: <SiRedux />, color: "#764ABC" },
-        { name: "RxJS", icon: <SiReactivex />, color: "#B7178C" },
-        { name: "React Router", icon: <FaReact />, color: "#61DAFB" },
-        { name: "Progressive Web Apps", icon: <SiPwa />, color: "#5A0FC8" },
-        { name: "Responsive Design", icon: <FaReact />, color: "#61DAFB" },
+        {
+          name: "React.js",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "Next.js",
+          icon: <SiNextdotjs />,
+          color: "#000000",
+        },
+        {
+          name: "Angular",
+          icon: <SiAngular />,
+          color: "#DD0031",
+        },
+        {
+          name: "TypeScript",
+          icon: <SiTypescript />,
+          color: "#3178C6",
+        },
+        {
+          name: "JavaScript ES6+",
+          icon: <SiJavascript />,
+          color: "#F7DF1E",
+        },
+        {
+          name: "HTML5",
+          icon: <FaHtml5 />,
+          color: "#E34F26",
+        },
+        {
+          name: "CSS3",
+          icon: <FaCss3Alt />,
+          color: "#1572B6",
+        },
+        {
+          name: "Tailwind CSS",
+          icon: <SiTailwindcss />,
+          color: "#38B2AC",
+        },
+        {
+          name: "SCSS",
+          icon: <SiSass />,
+          color: "#CC6699",
+        },
+        {
+          name: "React Hooks",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "Redux Toolkit",
+          icon: <SiRedux />,
+          color: "#764ABC",
+        },
+        {
+          name: "Context API",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "React Router",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "RxJS",
+          icon: <SiReactivex />,
+          color: "#B7178C",
+        },
+        {
+          name: "Responsive Design",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "Progressive Web Apps",
+          icon: <SiPwa />,
+          color: "#5A0FC8",
+        },
       ],
     },
 
     {
       category: "Backend Technologies",
+
       items: [
-        { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
-        { name: "Express.js", icon: <SiExpress />, color: "#000000" },
-        { name: "RESTful APIs", icon: <SiPostman />, color: "#FF6C37" },
+        {
+          name: "Node.js",
+          icon: <FaNodeJs />,
+          color: "#339933",
+        },
+        {
+          name: "Express.js",
+          icon: <SiExpress />,
+          color: "#000000",
+        },
+        {
+          name: "REST APIs",
+          icon: <SiPostman />,
+          color: "#FF6C37",
+        },
         {
           name: "JWT Authentication",
           icon: <SiJsonwebtokens />,
           color: "#000000",
         },
-        { name: "RBAC", icon: <SiAuth0 />, color: "#EB5424" },
-      ],
-    },
-
-    {
-      category: "Database",
-      items: [
-        { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" },
-        { name: "Mongoose ODM", icon: <SiMongodb />, color: "#880000" },
-        { name: "PostgreSQL", icon: <SiPostgresql />, color: "#336791" },
-        { name: "Indexing", icon: <SiDatabricks />, color: "#FF3621" },
-        { name: "Aggregation", icon: <SiMongodb />, color: "#47A248" },
         {
-          name: "Query Optimization",
-          icon: <SiPostgresql />,
-          color: "#336791",
+          name: "RBAC",
+          icon: <SiAuth0 />,
+          color: "#EB5424",
+        },
+        {
+          name: "Request Validation",
+          icon: <SiExpress />,
+          color: "#000000",
+        },
+        {
+          name: "Error Handling",
+          icon: <SiExpress />,
+          color: "#000000",
         },
       ],
     },
 
     {
-      category: "DevOps & Tools",
+      category: "Databases",
+
       items: [
-        { name: "Git", icon: <FaGitAlt />, color: "#F05032" },
-        { name: "GitHub", icon: <FaGithub />, color: "#181717" },
-        { name: "Docker", icon: <FaDocker />, color: "#2496ED" },
-        { name: "Webpack", icon: <SiWebpack />, color: "#8DD6F9" },
-        { name: "Babel", icon: <SiBabel />, color: "#F9DC3E" },
-        { name: "Jest", icon: <SiJest />, color: "#C21325" },
-        { name: "React Testing Library", icon: <FaReact />, color: "#61DAFB" },
+        {
+          name: "PostgreSQL",
+          icon: <SiPostgresql />,
+          color: "#336791",
+        },
+        {
+          name: "SQL",
+          icon: <SiPostgresql />,
+          color: "#336791",
+        },
+        {
+          name: "MongoDB",
+          icon: <SiMongodb />,
+          color: "#47A248",
+        },
+        {
+          name: "Mongoose",
+          icon: <SiMongodb />,
+          color: "#880000",
+        },
+        {
+          name: "Indexing",
+          icon: <SiPostgresql />,
+          color: "#336791",
+        },
+        {
+          name: "Pagination",
+          icon: <SiPostgresql />,
+          color: "#336791",
+        },
+        {
+          name: "Aggregation",
+          icon: <SiMongodb />,
+          color: "#47A248",
+        },
+      ],
+    },
+
+    {
+      category: "Testing & Tools",
+
+      items: [
+        {
+          name: "Jest",
+          icon: <SiJest />,
+          color: "#C21325",
+        },
+        {
+          name: "React Testing Library",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "Git",
+          icon: <FaGitAlt />,
+          color: "#F05032",
+        },
+        {
+          name: "GitHub",
+          icon: <FaGithub />,
+          color: "#181717",
+        },
+        {
+          name: "Postman",
+          icon: <SiPostman />,
+          color: "#FF6C37",
+        },
+        {
+          name: "Swagger / OpenAPI",
+          icon: <SiPostman />,
+          color: "#85EA2D",
+        },
+        {
+          name: "Vite",
+          icon: <FaReact />,
+          color: "#646CFF",
+        },
+        {
+          name: "Webpack",
+          icon: <FaReact />,
+          color: "#8DD6F9",
+        },
+        {
+          name: "Babel",
+          icon: <FaReact />,
+          color: "#F9DC3E",
+        },
+      ],
+    },
+
+    {
+      category: "DevOps & Deployment",
+
+      items: [
+        {
+          name: "Docker",
+          icon: <FaDocker />,
+          color: "#2496ED",
+        },
+        {
+          name: "GitHub Actions",
+          icon: <SiGithubactions />,
+          color: "#2088FF",
+        },
+        {
+          name: "CI/CD Fundamentals",
+          icon: <SiGithubactions />,
+          color: "#2088FF",
+        },
+        {
+          name: "Vercel",
+          icon: <SiNextdotjs />,
+          color: "#000000",
+        },
+        {
+          name: "Render",
+          icon: <FaNodeJs />,
+          color: "#46E3B7",
+        },
+      ],
+    },
+
+    {
+      category: "Frontend Performance & Engineering",
+
+      items: [
+        {
+          name: "Lazy Loading",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "Code Splitting",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "Dynamic Imports",
+          icon: <SiNextdotjs />,
+          color: "#000000",
+        },
+        {
+          name: "Memoization",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "Responsive Design",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "Accessibility",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "Debugging",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
+        {
+          name: "Clean Code",
+          icon: <FaReact />,
+          color: "#61DAFB",
+        },
       ],
     },
 
     {
       category: "Methodologies",
+
       items: [
-        { name: "Agile", icon: <SiScrumalliance />, color: "#009FDA" },
-        { name: "Scrum", icon: <SiScrumalliance />, color: "#009FDA" },
-        { name: "CI/CD", icon: <SiGithubactions />, color: "#2088FF" },
-        { name: "Code Reviews", icon: <FaGithub />, color: "#181717" },
+        {
+          name: "Agile",
+          icon: <SiScrumalliance />,
+          color: "#009FDA",
+        },
+        {
+          name: "Scrum",
+          icon: <SiScrumalliance />,
+          color: "#009FDA",
+        },
+        {
+          name: "CI/CD",
+          icon: <SiGithubactions />,
+          color: "#2088FF",
+        },
+        {
+          name: "Code Reviews",
+          icon: <FaGithub />,
+          color: "#181717",
+        },
         {
           name: "Secure Coding Practices",
-          icon: <SiSecurityscorecard />,
-          color: "#2E8B57",
+          icon: <SiAuth0 />,
+          color: "#EB5424",
         },
       ],
     },
 
     {
       category: "Languages Known",
+
       items: [
-        { name: "English (Fluent)", icon: <FaLanguage />, color: "#4B8BBE" },
-        { name: "Tamil (Native)", icon: <FaLanguage />, color: "#4B8BBE" },
+        {
+          name: "English (Fluent)",
+          icon: <FaLanguage />,
+          color: "#4B8BBE",
+        },
+        {
+          name: "Tamil (Native)",
+          icon: <FaLanguage />,
+          color: "#4B8BBE",
+        },
       ],
     },
   ],
+
+  // =========================================================
+  // JOB PORTALS
+  // =========================================================
+
   jobPortals: [
     {
       category: "Job Portals",
+
       items: [
         {
           portal: "GitHub",
           icon: <FaGithub />,
           link: "https://github.com/rajakuma6an2022",
         },
+
         {
           portal: "LinkedIn",
           icon: <FaLinkedin />,
           link: "https://www.linkedin.com/in/rajakuma6an/",
         },
-        // {
-        //   portal: "Naukri",
-        //   icon: naukri,
-        //   link: "https://www.naukri.com/mnjuser/profile",
-        // },
       ],
     },
   ],
+
+  // =========================================================
+  // EDUCATION
+  // =========================================================
+
   educations: [
     {
       course: "Bachelor of Computer Applications",
+
       college: "University of Madras",
+
       year: "2022 to 2024",
+
       type: "Distance Education",
     },
+
     {
       course: "Diploma in Electrical and Electronics Engineering",
-      college: "Sankar Polytecnic College",
+
+      college: "Sankar Polytechnic College",
+
       year: "2008 to 2011",
+
       percentage: "82%",
     },
   ],
+
+  // =========================================================
+  // CERTIFICATIONS
+  // =========================================================
+
   certifications: [
     {
       courseName: "The Complete Full-Stack Web Development Bootcamp",
-      author: "Dr.Angela Yu",
+
+      author: "Dr. Angela Yu",
+
       platform: "Udemy",
+
       certificate: fullStackCertificate,
+
       year: "Aug 27 2025",
     },
   ],
