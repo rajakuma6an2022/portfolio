@@ -15,7 +15,7 @@ const Projects: React.FC = () => {
       : portfolioData?.personalProjects || [];
 
   return (
-    <section className="md:p-5 p-2 mx-auto">
+    <section className="md:px-24 px-2 mx-auto">
       <h2 className="md:text-3xl text-xl font-bold mb-2 md:mb-6">Projects</h2>
 
       {/* Tabs */}

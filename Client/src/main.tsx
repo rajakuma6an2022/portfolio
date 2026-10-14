@@ -1,20 +1,16 @@
 import React from "react";
-import ReactDOM, { hydrateRoot } from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import "./index.css";
 import { ThemeProvider } from "./stateManagement/ThemeContext";
+import "./index.css";
 
-const rootElement = document.getElementById("root");
-if (rootElement) {
-  hydrateRoot(
-    rootElement,
-    <React.StrictMode>
+createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ThemeProvider>
       <BrowserRouter>
-        <ThemeProvider>
-          <App />
-        </ThemeProvider>
+        <App />
       </BrowserRouter>
-    </React.StrictMode>
-  );
-}
+    </ThemeProvider>
+  </React.StrictMode>
+);
