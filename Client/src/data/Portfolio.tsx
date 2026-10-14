@@ -180,32 +180,7 @@ export const portfolioData: PortfolioData = {
         "Wrote 161 Vitest tests and 44 Playwright E2E tests, including axe WCAG AA accessibility checks.",
         "Set up GitHub Actions CI/CD and deployed using Vercel, Render and Neon.",
       ],
-      link: "YOUR_PORTFOLIO_AUDITRAIL_LINK", // ← real link potunga
-    },
-    {
-      title: "SmartClinicQ – Multi-Tenant Clinic Queue Management SaaS",
-      description:
-        "Full-stack clinic queue management SaaS application for patients, appointments, queues, public booking and real-time queue status.",
-      technologies: [
-        { name: "Next.js", icon: <SiNextdotjs />, color: "#000000" },
-        { name: "React", icon: <FaReact />, color: "#61DAFB" },
-        { name: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
-        { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
-        { name: "Express.js", icon: <SiExpress />, color: "#000000" },
-        { name: "PostgreSQL", icon: <SiPostgresql />, color: "#336791" },
-        { name: "JWT", icon: <SiJsonwebtokens />, color: "#000000" },
-        { name: "RBAC", icon: <SiAuth0 />, color: "#EB5424" },
-        { name: "Socket.io", icon: <FaNodeJs />, color: "#010101" },
-        { name: "Docker", icon: <FaDocker />, color: "#2496ED" },
-      ],
-      highlights: [
-        "Built a full-stack clinic queue management SaaS application for patients, appointments, queues, public booking and real-time queue status.",
-        "Implemented multi-tenant data isolation, role-based authorization, access/refresh-token authentication, request validation, centralized error handling, search, filtering and pagination.",
-        "Developed Socket.io room-based real-time queue updates for live queue status changes.",
-        "Applied security controls including Helmet, strict CORS, rate limiting, secure cookies and environment-based configuration.",
-        "Designed PostgreSQL database structures and implemented backend API workflows using Node.js and Express.js.",
-      ],
-      link: "",
+      link: "/projects/auditrail",
     },
     {
       title: "Personal Portfolio Website",

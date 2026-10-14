@@ -12,6 +12,7 @@ import ContactForm from "./components/ContactForm";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./index.css"
+import AuditrailCaseStudy from "./pages/AuditrailCaseStudy";
 
 const App: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactForm />} />
+        <Route path="/projects/auditrail" element={<AuditrailCaseStudy />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

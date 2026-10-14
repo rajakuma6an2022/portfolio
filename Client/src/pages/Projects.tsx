@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { portfolioData } from "../data/Portfolio";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 
 const Projects: React.FC = () => {
   const [activeTab, setActiveTab] = useState<
@@ -55,7 +57,7 @@ const Projects: React.FC = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white dark:bg-gray-800 md:p-6 p-2 rounded-xl shadow-lg flex flex-col relative"
               >
-                {project.link && (
+                {/* {project.link && (
                   <motion.a
                     href={project.link}
                     target="_blank"
@@ -69,7 +71,7 @@ const Projects: React.FC = () => {
                     }}
                     whileTap={{ scale: 0.95 }}
                     className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-md cursor-pointer transition-all duration-300"
-                    title="Live Demo"
+                    title="View Case Study"
                   >
                     <svg
                       className="w-4 h-4 md:w-5 md:h-5" // smaller icon size
@@ -86,7 +88,7 @@ const Projects: React.FC = () => {
                       ></path>
                     </svg>
                   </motion.a>
-                )}
+                )} */}
 
                 <h3 className="md:text-xl text-base font-semibold mb-2">
                   {project.title}
@@ -111,11 +113,16 @@ const Projects: React.FC = () => {
 
                 <ul className="list-disc pl-5 space-y-1 text-gray-600 dark:text-gray-400">
                   {project.highlights.map((point, i) => (
-                    <li key={i} className="md:text-base text-sm">
+                    <li key={i} className="md:text-base text-sm pb-2">
                       {point}
                     </li>
                   ))}
                 </ul>
+                {project.link && (
+                  <Link to={project.link} className="...">
+                    View Case Study →
+                  </Link>
+                )}
               </motion.div>
             ))}
           </div>
